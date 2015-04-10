@@ -2,24 +2,23 @@
 
 var AngularSpringApp = {};
 
-var App = angular.module('AngularSpringApp', ['AngularSpringApp.filters', 'AngularSpringApp.services', 'AngularSpringApp.directives']);
+var App = angular.module('AngularSpringApp', [ 'AngularSpringApp.filters',
+		'AngularSpringApp.services', 'AngularSpringApp.directives' ]);
 
 // Declare app level module which depends on filters, and services
-App.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/cars', {
-        templateUrl: 'cars/layout',
-        controller: CarController
-    });
+App.config([ '$routeProvider', function($routeProvider) {
 
-    $routeProvider.when('/trains', {
-        templateUrl: 'trains/layout',
-        controller: TrainController
-    });
-    
-    $routeProvider.when('/railwaystations', {
-        templateUrl: 'railwaystations/layout',
-        controller: RailwayStationController
-    });
+	$routeProvider.when('/home', {
+		templateUrl : 'home/layout',
+		controller : HomeController
+	});
 
-    $routeProvider.otherwise({redirectTo: '/cars'});
-}]);
+	$routeProvider.when('/actions', {
+		templateUrl : 'actions/layout',
+		controller : ActionController
+	});
+
+	$routeProvider.otherwise({
+		redirectTo : '/home'
+	});
+} ]);
