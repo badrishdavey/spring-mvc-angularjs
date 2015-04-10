@@ -1,16 +1,12 @@
 spring-mvc-angularjs
 ====================
 
-A simple application to demonstrate how to configure angularjs with Spring MVC
+A simple application to demonstrating the use of Spring MVC as the RESTful service provider and AngularJS for the front end javascript framework
 
-The application demonstrates how to configure Spring MVC with AngularJS and Velocity.
+The demo illustrates the menu item with Home  , Actions are two tabs. 
 
-It uses the AngularJS-Seed with some modifications to allow Spring MVC load the HTML. Also integrated Velocity in case it is needed to pass some values from the spring mvc controller into the partials or index.html file.
+It has the image on the menu 
 
-I also included the bootstrap library for a better UI.
+consists of the Actions view page with listes the actions and also exposes some CRUD functionality.
 
-RUN: 
-
-mvn tomcat:run
-
-Then open the URL: http://localhost:8080/AngularSpringApp
+Then open the URL: http://localhost:8080/AngularSpringApp/#/home
