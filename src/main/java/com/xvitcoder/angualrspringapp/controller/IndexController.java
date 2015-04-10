@@ -1,7 +1,14 @@
 package com.xvitcoder.angualrspringapp.controller;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xvitcoder.angualrspringapp.beans.Action;
+import com.xvitcoder.angualrspringapp.dao.ActionDataRepository;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class IndexController {
+	
+
+
 
     @RequestMapping
     public String getIndexPage() {
@@ -22,4 +32,5 @@ public class IndexController {
     public String getHomePartialPage() {
         return "home/layout";
     }
+
 }

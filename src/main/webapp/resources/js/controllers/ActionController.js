@@ -12,6 +12,10 @@ var ActionController = function($scope, $http) {
         $http.get('actions/actionlist.json').success(function(rsList){
             $scope.actions = rsList;
         });
+        
+        $http.get('actions/actionlist.db.json').success(function(rsList){
+            $scope.actionsdb = rsList;
+        });
     };
 
     $scope.addNewAction = function(rs) {

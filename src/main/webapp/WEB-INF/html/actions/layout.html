@@ -55,7 +55,7 @@
 
 </form>
 <hr />
-<h3>Actions List</h3>
+<h3>Actions List from in-memory</h3>
 <div class="alert alert-info" ng-show="actions.length == 0">No
 	Actions found</div>
 <table class="table table-bordered table-striped"
@@ -89,3 +89,30 @@
 </table>
 <button class="btn btn-danger" ng-show="actions.length > 1"
 	ng-click="removeAllActions()">Remove All actions</button>
+	
+	
+	
+<h3>Actions List From Database</h3>
+<div class="alert alert-info" ng-show="actionsdb.length == 0">No
+	Actions found</div>
+<table class="table table-bordered table-striped"
+	ng-show="actionsdb.length > 0">
+	<thead>
+		<tr>
+			<th style="text-align: center; width: 25px;">Id</th>
+			<th style="text-align: center;">Name</th>
+			<th style="text-align: center;">Asignee</th>
+			<th style="text-align: center;">Create Date</th>
+			<th style="text-align: center;">Due Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in actionsdb | orderBy:predicate">
+			<td style="text-align: center;">{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.asignee}}</td>
+			<td>{{item.createdDate}}</td>
+			<td>{{item.dueDate}}</td>
+		</tr>
+	</tbody>
+</table>
