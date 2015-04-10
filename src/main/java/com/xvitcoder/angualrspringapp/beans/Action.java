@@ -1,5 +1,7 @@
 package com.xvitcoder.angualrspringapp.beans;
 
+import java.util.Date;
+
 
 public class Action {
 
@@ -12,9 +14,9 @@ public class Action {
 	 */
 	private String asignee;
 
-	private String createdDate;
+	private Date createdDate;
 
-	private String dueDate;
+	private Date dueDate;
 
 	public Long getId() {
 		return id;
@@ -40,19 +42,19 @@ public class Action {
 		this.asignee = asignee;
 	}
 
-	public String getCreatedDate() {
+	public Date getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(String createdDate) {
+	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public String getDueDate() {
+	public Date getDueDate() {
 		return dueDate;
 	}
 
-	public void setDueDate(String dueDate) {
+	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
 

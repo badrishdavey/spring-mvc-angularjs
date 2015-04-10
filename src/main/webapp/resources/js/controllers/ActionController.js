@@ -22,7 +22,7 @@ var ActionController = function($scope, $http) {
             $scope.fetchActionList();
             $scope.ac.name = '';
             $scope.ac.asignee = '';
-            $scope.ac.createDate = '';
+            $scope.ac.createdDate = '';
             $scope.ac.dueDate = '';
         }).error(function() {
             $scope.setError('Could not add a new action');
