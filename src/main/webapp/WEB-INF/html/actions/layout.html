@@ -1,0 +1,91 @@
+<div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
+
+<form class="form-horizontal">
+
+	<div class="control-group">
+		<label class="control-label" for="ac_name">Action Name</label>
+
+		<div class="controls">
+			<input type="text" id="ac_name" ng-model="ac.name"
+				placeholder="Action Name" required min="2">
+		</div>
+	</div>
+
+
+	<div class="control-group">
+		<label class="control-label" for="train_name">Asignee</label>
+
+		<div class="controls">
+			<input type="text" id="train_name" ng-model="ac.asignee"
+				placeholder="Asignee" required min="2">
+		</div>
+	</div>
+
+
+
+	<div class="control-group">
+		<label class="control-label" for="created_date">Created Date</label>
+
+		<div class="controls">
+			<input type="text" id="created_date" ng-model="ac.createdDate"
+				placeholder="Created Date">
+		</div>
+	</div>
+	
+	
+	<div class="control-group">
+		<label class="control-label" for="due_date">Due Date</label>
+
+		<div class="controls">
+			<input type="text" id="due_date" ng-model="ac.dueDate"
+				placeholder="Due Date">
+		</div>
+	</div>
+
+
+
+	<div class="controls">
+		<button type="button" class="btn btn-primary" ng-disabled="!ac.name"
+			ng-hide="editMode" ng-click="addNewAction(ac)">Add Action</button>
+
+		<button type="button" class="btn btn-primary" ng-disabled="!ac.name"
+			ng-show="editMode" ng-click="updateAction(ac)">Save</button>
+		<button type="button" class="btn" ng-click="resetActionForm()">Reset</button>
+	</div>
+
+</form>
+<hr />
+<h3>Actions List</h3>
+<div class="alert alert-info" ng-show="actions.length == 0">No
+	Actions found</div>
+<table class="table table-bordered table-striped"
+	ng-show="actions.length > 0">
+	<thead>
+		<tr>
+			<th style="text-align: center; width: 25px;">Id</th>
+			<th style="text-align: center;">Name</th>
+			<th style="text-align: center;">Asignee</th>
+			<th style="text-align: center;">Create Date</th>
+			<th style="text-align: center;">Due Date</th>
+			<th style="text-align: center;">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in actions | orderBy:predicate">
+			<td style="text-align: center;">{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.asignee}}</td>
+			<td>{{item.createdDate}}</td>
+			<td>{{item.dueDate}}</td>
+
+
+			<td style="width: 100px; text-align: center;">
+				<button class="btn btn-mini btn-danger"
+					ng-click="removeAction(item.id)">Remove</button>
+				<button class="btn btn-mini btn-success" ng-click="editAction(item)">Edit</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<button class="btn btn-danger" ng-show="actions.length > 1"
+	ng-click="removeAllActions()">Remove All actions</button>
