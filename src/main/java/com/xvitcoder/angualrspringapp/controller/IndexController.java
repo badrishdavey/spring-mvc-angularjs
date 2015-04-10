@@ -1,20 +1,10 @@
 package com.xvitcoder.angualrspringapp.controller;
 
-import java.util.List;
-
-import javax.inject.Inject;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.xvitcoder.angualrspringapp.beans.Action;
-import com.xvitcoder.angualrspringapp.dao.ActionDataRepository;
-
 /**
- * Created with IntelliJ IDEA.
- * User: xvitcoder
- * Date: 12/20/12
- * Time: 5:27 PM
+ *
  */
 @Controller
 @RequestMapping("/")
