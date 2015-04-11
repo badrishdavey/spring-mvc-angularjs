@@ -1,61 +1,123 @@
 /* app css stylesheet */
-
 #wrapper {
-    margin: 0 auto;
-    width: 1200px; 
-    margin-top: 75px;
+	margin: 0 auto;
+	width: 1200px;
+	margin-top: 75px;
 }
 
 .menu {
-    text-align: center;
-    list-style: none;
-    padding: 0 0 0.5em;
-    font-size: 25px;
-    font-weight: bolder;
-    font-color : white;
+	text-align: center;
+	list-style: none;
+	padding: 0 0 0.5em;
+	font-size: 25px;
+	font-weight: bolder;
+	font-color: white;
 }
 
 .menu:before {
-    content: "";
+	content: "";
 }
 
 .menu:after {
-    content: "";
+	content: "";
 }
 
-.menu > li {
-    display: inline;
+.menu>li {
+	display: inline;
 }
 
-.menu > li:before {
-    content: "|";
-    padding-right: 0.3em;
+.menu>li:before {
+	content: "|";
+	padding-right: 0.3em;
 }
 
-.menu > li:nth-child(1):before {
-    content: "";
-    padding: 0;
+.menu>li:nth-child(1):before {
+	content: "";
+	padding: 0;
 }
 
-.navbar-inverse { background-color: #222222}
-.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #}
-.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #080808}
-.dropdown-menu { background-color: #ffffff}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428bca}
-.navbar-inverse { background-image: none; }
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
-.navbar-inverse { border-color: #080808}
-.navbar-inverse .navbar-brand { color: #999999}
-.navbar-inverse .navbar-brand:hover { color: #ffffff}
-.navbar-inverse .navbar-nav>li>a { color: #999999 ;font-weight: bold;}
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #ffffff}
-.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #ffffff}
-.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #ffffff}
-.dropdown-menu>li>a { color: #333333}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #ffffff}
-.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
-.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #ffffff}
-.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
-.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #ffffff}
+.navbar-inverse {
+	background-color: #222222
+}
 
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus
+	{
+	background-color: #
+}
 
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a:focus
+	{
+	background-color: #080808
+}
+
+.dropdown-menu {
+	background-color: #ffffff
+}
+
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
+	background-color: #428bca
+}
+
+.navbar-inverse {
+	background-image: none;
+}
+
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
+	background-image: none;
+}
+
+.navbar-inverse {
+	border-color: #080808
+}
+
+.navbar-inverse .navbar-brand {
+	color: #999999
+}
+
+.navbar-inverse .navbar-brand:hover {
+	color: #ffffff
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #999999;
+	font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus
+	{
+	color: #ffffff
+}
+
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a:focus
+	{
+	color: #ffffff
+}
+
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.active>a:focus
+	{
+	color: #ffffff
+}
+
+.dropdown-menu>li>a {
+	color: #333333
+}
+
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus {
+	color: #ffffff
+}
+
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
+	border-top-color: #999999
+}
+
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+	border-top-color: #ffffff
+}
+
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
+	border-bottom-color: #999999
+}
+
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+	border-bottom-color: #ffffff
+}
