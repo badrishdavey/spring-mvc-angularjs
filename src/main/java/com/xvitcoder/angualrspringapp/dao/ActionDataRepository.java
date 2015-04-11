@@ -39,12 +39,12 @@ public class ActionDataRepository {
 	}
 	
 	public List<Action> findAll() {
-		return this.jdbcTemplate.query("select * from action", new RowMapper<Action>() {
+		return this.jdbcTemplate.query("select * from action a , user u where a.asignee_id = u.id", new RowMapper<Action>() {
 				public Action mapRow(ResultSet rs, int rowNum) throws SQLException {
 					Action s = new Action();
 					s.setId(rs.getLong("id"));
 					s.setName(rs.getString("name"));
-					s.setAsignee(rs.getString("asignee"));
+					s.setAsignee(rs.getString("user_name"));
 					s.setCreatedDate(rs.getString("created_date"));
 					s.setDueDate(rs.getString("due_date"));
 					return s;
