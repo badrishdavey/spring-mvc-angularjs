@@ -26,21 +26,30 @@
 
 
 </head>
-<body id = "page-top">
+<body>
 
 
-    
-	<a class="navbar-brand" href="#"> <img
-		src="http://www.indiggoassociates.com/images2/logos/logo.jpg" alt="">
-	</a>
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav"
+		role="banner">
+		<a class="navbar-brand" href="#" style="float: left;"> <img
+			src="http://www.indiggoassociates.com/images2/logos/logo.jpg" alt="">
+		</a>
+		<div class="container">
+
+			<nav class="navbar-collapse " role="navigation">
+				<ul class="nav navbar-nav" style="float:right">
+
+					<li><a href="#/home">Home</a></li>
+					<li><a href="#/actions">Actions</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</header>
+
 
 	<div id="wrapper">
 
-		<ul class="menu">
-			<li><a href="#/home">Home</a></li>
-			<li><a href="#/actions">Actions</a></li>
-		</ul>
-		<hr class="" />
 		<div ng-view></div>
 
 	</div>
